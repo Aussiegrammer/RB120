@@ -104,7 +104,7 @@ class Human < Player
     loop do
       puts "What's your name?"
       n = gets.chomp
-      break unless n.empty?
+      break if n.count("a-zA-Z") > 0
       puts "Sorry, must enter a value."
     end
     self.name = n
